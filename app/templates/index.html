@@ -5,16 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ElevenLabs Conversational AI</title>
     </head>
-    <body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
-        <h1>ElevenLabs Conversational AI</h1>
-        <div style="margin-bottom: 20px;">
-            <button id="startButton" style="padding: 10px 20px; margin: 5px;">Start Conversation</button>
-            <button id="stopButton" style="padding: 10px 20px; margin: 5px;" disabled>Stop Conversation</button>
+    <body style="font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: 0 auto;">
+        <h1 style="text-align: center;">ElevenLabs Conversational AI</h1>
+
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button id="startButton" style="padding: 10px 20px; margin: 5px; background: #28a745; color: white; border: none; cursor: pointer;">Start Conversation</button>
+            <button id="stopButton" style="padding: 10px 20px; margin: 5px; background: #dc3545; color: white; border: none; cursor: pointer;" disabled>Stop Conversation</button>
         </div>
-        <div style="font-size: 18px;">
-            <p>Status: <span id="connectionStatus">Disconnected</span></p>
-            <p>Agent is <span id="agentStatus">listening</span></p>
+
+        <div style="text-align: center; margin-bottom: 20px; font-size: 16px;">
+            <p>Status: <span id="connectionStatus" style="font-weight: bold;">Disconnected</span></p>
+            <p>Agent: <span id="agentStatus" style="font-weight: bold;">Stopped</span></p>
         </div>
+
+        <div style="margin-top: 30px;">
+            <h2 style="font-size: 18px; margin-bottom: 10px;">Transcript:</h2>
+            <div id="transcriptBox" style="border: 1px solid #ccc; padding: 15px; min-height: 300px; max-height: 500px; overflow-y: auto; background: #f9f9f9; font-size: 14px; line-height: 1.8;"></div>
+        </div>
+
         <script type="module" src="/static/script.js"></script>
     </body>
 </html>
